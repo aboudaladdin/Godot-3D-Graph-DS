@@ -1,0 +1,86 @@
+[gd_scene load_steps=9 format=3 uid="uid://cw8c8w3rauonp"]
+
+[ext_resource type="Script" path="res://addons/drawing_graphs/ui/toolbar.gd" id="1_pucfw"]
+[ext_resource type="Texture2D" uid="uid://bwbfir1p4xrha" path="res://addons/drawing_graphs/res/icons/nodes-shapes-and-symbols-svgrepo-com.svg" id="2_lu8ih"]
+[ext_resource type="Texture2D" uid="uid://rjlpuipiut1d" path="res://addons/drawing_graphs/res/icons/add-plus-svgrepo-com.svg" id="2_wnhch"]
+[ext_resource type="Texture2D" uid="uid://bycypxjpylifj" path="res://addons/drawing_graphs/res/icons/forbidden-svgrepo-com.svg" id="3_pngh8"]
+[ext_resource type="Texture2D" uid="uid://cffcxuxdhxdql" path="res://addons/drawing_graphs/res/icons/arrow-select-svgrepo-com.svg" id="3_uxicl"]
+[ext_resource type="Texture2D" uid="uid://b5ebrqan3715l" path="res://addons/drawing_graphs/res/icons/link-chain-svgrepo-com.svg" id="4_tr5g6"]
+[ext_resource type="Texture2D" uid="uid://dsrdsawnjixt5" path="res://addons/drawing_graphs/res/icons/scissors-cut-svgrepo-com.svg" id="5_yseuq"]
+[ext_resource type="Texture2D" uid="uid://tct14xt0pm0" path="res://addons/drawing_graphs/res/icons/wrench-screwdriver-svgrepo-com.svg" id="6_5hlpa"]
+
+[node name="Toolbar" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pucfw")
+
+[node name="BoxContainer" type="BoxContainer" parent="."]
+layout_mode = 0
+offset_right = 217.0
+offset_bottom = 32.0
+
+[node name="VSeparator" type="VSeparator" parent="BoxContainer"]
+layout_mode = 2
+
+[node name="logo2" type="TextureRect" parent="BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.8
+texture = ExtResource("2_lu8ih")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="SelectButton" type="Button" parent="BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+icon = ExtResource("3_uxicl")
+icon_alignment = 1
+expand_icon = true
+
+[node name="DrawButton" type="Button" parent="BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+icon = ExtResource("2_wnhch")
+icon_alignment = 1
+expand_icon = true
+
+[node name="DeleteButton" type="Button" parent="BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+icon = ExtResource("3_pngh8")
+icon_alignment = 1
+expand_icon = true
+
+[node name="LinkButton" type="Button" parent="BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+toggle_mode = true
+icon = ExtResource("4_tr5g6")
+icon_alignment = 1
+expand_icon = true
+
+[node name="SplitButton" type="Button" parent="BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+toggle_mode = true
+icon = ExtResource("5_yseuq")
+icon_alignment = 1
+expand_icon = true
+
+[node name="ConfigButton" type="Button" parent="BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+toggle_mode = true
+icon = ExtResource("6_5hlpa")
+icon_alignment = 1
+expand_icon = true
